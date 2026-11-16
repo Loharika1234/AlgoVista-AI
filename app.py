@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import time
 import tracemalloc
 from algorithms.sorting import mergesort
+from algorithms.sorting.bubble_sort import bubblesort
+from algorithms.sorting.selection_sort import selectionsort
 from analysis.time_analyzer import benchmark_merge_sort
 from analysis.complexity_predictor import predict_complexity
 #page configuration
@@ -42,7 +44,11 @@ elif menu == "Algorithm Lab":
     st.write("Experiment with sorting algorithms using your own input.")
     algorithm = st.selectbox(
         "Select Algorithm",
-        ["Merge Sort"]
+        ["Merge Sort",
+        "Bubble Sort",
+        "Selection Sort"
+        ]
+        
     )
     user_input = st.text_input(
         "Enter numbers separated by commas",
