@@ -10,7 +10,7 @@ def bubblesort(numbers):
      peak_memory:Peak memory used in bytes
   """
   if not isinstance(numbers,list):
-    raise ValueError("Input must be a list..")
+    raise TypeError("Input must be a list..")
   if any(type(num) is not int for num in numbers):
     raise ValueError("All elements must be integers..")
   arr=numbers.copy()
